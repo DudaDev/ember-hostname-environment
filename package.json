@@ -1,0 +1,23 @@
+{
+  "name": "ember-hostname-environment",
+  "version": "1.0.0",
+  "description": "Manipulate ember environment configuration by a hostname",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DudaDev/ember-hostname-environment.git"
+  },
+  "author": "Ramy Ben Aroya",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DudaDev/ember-hostname-environment/issues"
+  },
+  "keywords": [
+    "ember-addon"
+  ],
+  "homepage": "https://github.com/DudaDev/ember-hostname-environment",
+  "license": "MIT"
+}
