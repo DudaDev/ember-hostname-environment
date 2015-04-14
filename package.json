@@ -1,6 +1,6 @@
 {
   "name": "ember-hostname-environment",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Manipulate ember environment configuration by a hostname",
   "main": "index.js",
   "scripts": {
