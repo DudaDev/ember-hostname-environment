@@ -1,6 +1,6 @@
 # Ember Hostname Environment
 
-Manipulate ember-cli `ENV` as you like be creating a node module by the name `config/environment-{hostname}.js`
+Manipulate ember-cli `ENV` as you like by creating a node module by the name `config/environment-{hostname}.js`
 
 ## Installation
 
