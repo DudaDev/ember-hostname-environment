@@ -1,6 +1,6 @@
 {
   "name": "ember-hostname-environment",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Manipulate ember environment configuration by a hostname",
   "main": "index.js",
   "scripts": {
@@ -15,9 +15,8 @@
   "bugs": {
     "url": "https://github.com/DudaDev/ember-hostname-environment/issues"
   },
-  "keywords": [
-    "ember-addon"
-  ],
   "homepage": "https://github.com/DudaDev/ember-hostname-environment",
-  "license": "MIT"
+  "dependencies": {
+    "colors": "^1.0.3"
+  }
 }

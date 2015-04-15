@@ -1,13 +1,18 @@
-var os = require('os');
-module.exports = function emberHostnameEnvironment(ENV){
-	var hostnameEnvironment,
-		hostName = os.hostname();
-	try {
-		hostnameEnvironment = require(__dirname + '/../../config/environment-' + hostName);
-		if (typeof hostnameEnvironment === 'function'){
-			hostnameEnvironment(ENV);
-		}
-		console.log('Modified environment configuration for ' + hostName);
-	} catch (e){}
-	return ENV;
+var os = require('os'),
+	path = require('path'),
+	colors = require('colors'),
+	hostName = os.hostname(),
+	hostnameEnvironment;
+
+try {
+	hostnameEnvironment = require(path.join(__dirname, '/../../config/environment-' + hostName));
+	console.log(('Environment configuration has been modified for ' + hostName).cyan);
+} catch (e) {}
+
+module.exports = function emberHostnameEnvironment(ENV) {
+	if (typeof hostnameEnvironment === 'function') {
+		return hostnameEnvironment(ENV);
+	} else {
+		return ENV;	
+	}
 }
