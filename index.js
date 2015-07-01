@@ -4,13 +4,15 @@ var os = require('os'),
 	hostName = os.hostname(),
 	hostnameEnvironment;
 
-try {
-	hostnameEnvironment = require(path.join(__dirname, '/../../config/environment-' + hostName));
-	console.log(('Environment configuration has been modified for ' + hostName).cyan);
-} catch (e) {}
+if (!process.env.DISABLE_EMBER_HOSTNAME_ENVIRONMENT) {
+	try {
+		hostnameEnvironment = require(path.join(__dirname, '/../../config/environment-' + hostName));
+		console.log(('Environment configuration has been modified for ' + hostName).cyan);
+	} catch (e) {}	
+}
 
 module.exports = function emberHostnameEnvironment(ENV) {
-	if (typeof hostnameEnvironment === 'function') {
+	if (!process.env.DISABLE_EMBER_HOSTNAME_ENVIRONMENT && typeof hostnameEnvironment === 'function') {
 		return hostnameEnvironment(ENV);
 	} else {
 		return ENV;	
