@@ -7,10 +7,10 @@ var os = require('os'),
 try {
 	hostnameEnvironment = require(path.join(__dirname, '/../../config/environment-' + hostName));
 	if (!process.env.DISABLE_EMBER_HOSTNAME_ENVIRONMENT) {
-		console.log(('Environment configuration has been modified for ' + hostName).yellow);
+		console.log(('Environment configuration has been modified for ' + hostName).cyan);
 	} else {
 		hostnameEnvironment = null;
-		console.log(('Dont worry, your local environment for ' + hostName + ' has not been applied').olive);	
+		console.log(('Dont worry, your local environment for ' + hostName + ' has not been applied').yellow);	
 	}
 	
 } catch (e) {}
